@@ -1,14 +1,12 @@
 
-import './App.css'
+import About from "./About.jsx";
 
 function App() {
-
   return (
-    <div className="h-screen w-screen flex justify-center items-center">
-        <h1 className="text-red-900 text-5xl">Hello World</h1>
-    </div>
-
+    <>
+      <About />
+    </>
   );
 }
 
-export default App
+export default App;

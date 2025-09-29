@@ -1,1 +1,103 @@
+body, html, #root {
+  min-height: 100vh;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(120deg, #0ea5e9 0%, #f0fdfa 100%);
+  min-height: 100vh;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.about-container {
+  max-width: 700px;
+  margin: 64px auto 32px auto;
+  background: rgba(255,255,255,0.95);
+  border-radius: 22px;
+  box-shadow: 0 8px 32px rgba(14,165,233,0.13), 0 1.5px 0 #bae6fd;
+  padding: 48px 36px 36px 36px;
+  border: none;
+  transition: box-shadow 0.2s, transform 0.2s;
+  backdrop-filter: blur(2px);
+  position: relative;
+  overflow: hidden;
+}
+.about-container::before {
+  content: "";
+  position: absolute;
+  top: -60px; left: -60px;
+  width: 180px; height: 180px;
+  background: radial-gradient(circle, #bae6fd 0%, transparent 80%);
+  opacity: 0.25;
+  z-index: 0;
+}
+.about-container:hover {
+  box-shadow: 0 12px 40px rgba(14,165,233,0.18);
+  transform: translateY(-2px) scale(1.012);
+}
+.about-container h1 {
+  color: #0ea5e9;
+  margin-bottom: 18px;
+  font-size: 2.7em;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  z-index: 1;
+}
+.about-container h1::before {
+  content: "🎬";
+  font-size: 1.1em;
+}
+.about-container ul {
+  margin: 24px 0 32px 28px;
+  padding-left: 0;
+  z-index: 1;
+}
+.about-container li {
+  font-size: 1.15em;
+  margin-bottom: 12px;
+  color: #0369a1;
+  position: relative;
+  padding-left: 22px;
+  font-weight: 500;
+  z-index: 1;
+}
+.about-container li::before {
+  content: "✔";
+  color: #22d3ee;
+  position: absolute;
+  left: 0;
+  font-size: 1em;
+}
+.about-container p {
+  font-size: 1.15em;
+  color: #334155;
+  margin-bottom: 12px;
+  z-index: 1;
+  line-height: 1.7;
+}
+.about-container::after {
+  content: "";
+  position: absolute;
+  bottom: -40px; right: -40px;
+  width: 120px; height: 120px;
+  background: radial-gradient(circle, #0ea5e9 0%, transparent 80%);
+  opacity: 0.13;
+  z-index: 0;
+}
+@media (max-width: 600px) {
+  .about-container {
+    padding: 12vw 3vw 10vw 3vw;
+    font-size: 0.98em;
+    margin: 24px 0 12px 0;
+  }
+  .about-container h1 {
+    font-size: 1.2em;
+  }
+}
 
