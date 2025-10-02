@@ -1,10 +1,9 @@
 
-import About from "./About.jsx";
 
 function App() {
   return (
     <>
-      <About />
+        <h1>Hello</h1>
     </>
   );
 }
