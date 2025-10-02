@@ -181,7 +181,6 @@ export default function MovieDetail() {
 
             <Color src={movie.backdropUrl} crossOrigin="anonymous" format="hex">
                 {({ data, loading, error }) => {
-                    console.log(movie.backdropUrl);
                     if (loading) return <p>Đang tải màu...</p>;
                     if (error) return <p>Lỗi: {error.message}</p>;
                     return (
