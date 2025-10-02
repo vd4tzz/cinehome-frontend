@@ -1,1 +1,51 @@
 @import "tailwindcss";
+
+:root {
+    --navbar-height: 64px;
+}
+
+@layer utilities {
+    .layout-pt-navbar {
+        padding-top: var(--navbar-height);
+    }
+}
+
+.layout-container {
+    @apply mx-auto max-w-7xl w-screen px-3
+}
+
+.my-swiper {
+    --swiper-navigation-size: 20px;
+    --swiper-navigation-top-offset: 50%;
+    --swiper-navigation-sides-offset: 10px;
+    --swiper-navigation-color: white;
+
+    --swiper-pagination-color: red;
+    --swiper-pagination-bullet-inactive-color: red;
+    --swiper-pagination-bullet-inactive-opacity: 0.2;
+    --swiper-pagination-top: auto;
+    --swiper-pagination-bottom: 20px;
+}
+
+.my-swiper .swiper-wrapper {
+    padding: 10px 0;
+}
+
+@layer base {
+    body {
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+}
+
+li:last-child a {
+    border-bottom: none;
+}
+
+/* global.css */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* IE, Edge */
+    scrollbar-width: none;  /* Firefox */
+}
