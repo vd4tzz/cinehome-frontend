@@ -8,6 +8,8 @@ export default function MovieDetail() {
     const {movieId} = useParams();
     const movieDetailUrl = `https://api.themoviedb.org/3/movie/${movieId}?language=vi-VN&region=VN&append_to_response=credits`;
 
+    // const movieDetailUrl = `/api/3/movie/${movieId}?language=vi-VN&region=VN&append_to_response=credits&api_key=YOUR_API_KEY`;
+
     // Dữ liệu phim mẫu
     const movieSchema = {
         title: "AVATAR: THE WAY OF WATER",
@@ -28,7 +30,8 @@ export default function MovieDetail() {
     const [movie, setMovie] = useState(movieSchema);
 
     function normalizeResponse(movie) {
-        const baseUrl = "https://image.tmdb.org/t/p/original";
+        // const baseUrl = "https://image.tmdb.org/t/p/original";
+        const baseUrl = "/images/t/p/original";
         const defaultPoster = "https://placehold.co/1920x1080";   // ảnh fallback
         const defaultBackdrop = "https://placehold.co/1920x1080";
         console.log(movie);
@@ -178,6 +181,7 @@ export default function MovieDetail() {
 
             <Color src={movie.backdropUrl} crossOrigin="anonymous" format="hex">
                 {({ data, loading, error }) => {
+                    console.log(movie.backdropUrl);
                     if (loading) return <p>Đang tải màu...</p>;
                     if (error) return <p>Lỗi: {error.message}</p>;
                     return (
