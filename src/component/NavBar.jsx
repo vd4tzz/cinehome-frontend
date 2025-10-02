@@ -23,6 +23,7 @@ function NavBar() {
         <nav className="w-screen backdrop-blur bg-gray-900/40 text-white fixed top-0 z-1 font-roboto-semibold text-xl">
             <div className="layout-container">
                 <div className="flex justify-between items-center py-1">
+
                     {/* Ben trai gom logo va menu tab */}
                     <div className="flex justify-center items-center space-x-3">
                         {/* Logo */}
