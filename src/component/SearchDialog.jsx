@@ -95,7 +95,7 @@ function SearchDialog({ isOpen, onClose }) {
                         initial={{ y: "50%", opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         exit={{ y: "100%", opacity: 0 }}
-                        transition={{ duration: 0.3}}
+                        transition={{ duration: 0.2}}
                     />
 
                     <div className="fixed flex justify-center w-screen z-50">
