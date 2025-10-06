@@ -3,7 +3,8 @@ import MovieDetailLayout from "./layout/MovieDetailLayout.jsx";
 import MovieDetailPage from "./page/MovieDetailPage.jsx";
 import MoviePage from "./page/MoviePage.jsx";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
-import About from "./page/AboutPage.jsx";
+import AboutPage from "./page/AboutPage.jsx";
+import FoodPage from "./page/FoodPage.jsx";
 
 import "./App.css";
 
@@ -22,8 +23,13 @@ function App() {
               </Route>
 
               <Route path="/" element={<DefaultLayout />} >
-                    <Route path="/about" element={<About />} />
+                    <Route path="/about" element={<AboutPage />} />
               </Route>
+
+              <Route path="/" element={<DefaultLayout />} >
+                    <Route path="/food" element={<FoodPage/>} />
+              </Route>
+
           </Routes>
       </BrowserRouter>
   );

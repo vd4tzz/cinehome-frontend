@@ -15,7 +15,7 @@ function NavBar() {
     const tabs = [
         { label: "Phim", path: "/movie", order: 0 },
         { label: "Rạp", path: "/cinema", order: 1 },
-        { label: "Đồ ăn", path: "/food", order: 2 },
+        { label: "Đặt Bắp Nước", path: "/food", order: 2 },
         { label: "Giới thiệu", path: "/about", order: 3}
     ];
 
