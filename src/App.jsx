@@ -5,6 +5,7 @@ import MoviePage from "./page/MoviePage.jsx";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import AboutPage from "./page/AboutPage.jsx";
 import FoodPage from "./page/FoodPage.jsx";
+import AuthPage from "./page/AuthPage.jsx";
 
 import "./App.css";
 
@@ -28,6 +29,10 @@ function App() {
 
               <Route path="/" element={<DefaultLayout />} >
                     <Route path="/food" element={<FoodPage/>} />
+              </Route>
+
+              <Route path="/" element={<DefaultLayout />} >
+                    <Route path="/auth" element={<AuthPage />} />
               </Route>
 
           </Routes>

@@ -16,7 +16,8 @@ function NavBar() {
         { label: "Phim", path: "/movie", order: 0 },
         { label: "Rạp", path: "/cinema", order: 1 },
         { label: "Đặt Bắp Nước", path: "/food", order: 2 },
-        { label: "Giới thiệu", path: "/about", order: 3}
+        { label: "Giới thiệu", path: "/about", order: 3},
+        
     ];
 
     return (
@@ -54,15 +55,14 @@ function NavBar() {
                         </button>
 
                         {/* Sign-in/Profile btn */}
-                        <button
-                            className="p-2 cursor-pointer hover:bg-[#ffffff1a] rounded-md flex justify-center items-center space-x-2"
-                            onClick={() => alert("click cc")}
-                        >
+                        <NavLink
+                            to="/auth"
+                            className="p-2 cursor-pointer hover:bg-[#ffffff1a] rounded-md flex justify-center items-center space-x-2">
                             <UserRound size={24} />
-                            <p className="font-semibold hidden md:block  cursor-pointer">
+                            <p className="font-semibold hidden md:block cursor-pointer">
                                 Login
                             </p>
-                        </button>
+                        </NavLink>
 
 
                         {/* Menu btn */}
