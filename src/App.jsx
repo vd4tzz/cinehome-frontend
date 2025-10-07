@@ -1,8 +1,8 @@
 import DefaultLayout from "./layout/DefaultLayout.jsx";
-import MovieDetailLayout from "./layout/MovieDetailLayout.jsx";
+import FreeLayout from "./layout/MovieDetailLayout.jsx";
 import MovieDetailPage from "./page/MovieDetailPage.jsx";
 import MoviePage from "./page/MoviePage.jsx";
-import {BrowserRouter, Routes, Route} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import "./App.css";
 
@@ -16,7 +16,7 @@ function App() {
                   <Route path="/movie" element={<MoviePage />} />
               </Route>
 
-              <Route path="/movie/:movieId" element={<MovieDetailLayout />}>
+              <Route path="/movie/:movieId" element={<FreeLayout />}>
                       <Route index element={<MovieDetailPage />} />
               </Route>
           </Routes>
