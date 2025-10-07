@@ -1,24 +1,26 @@
-
 import { useState } from "react";
+import popcorn1 from '../assets/popcorn1.png';
+import popcorn2 from '../assets/popcorn2.png';
+import popcorn3 from '../assets/popcorn3.png';
 
 const combos = [
   {
     name: "COMBO NHÀ GẤU",
     desc: "4 Coke + 2 Bắp 2 Ngăn 64OZ Phô Mai + Caramel",
     price: "249,000VND",
-    img: "/assets/popcorn1.png"
+    img: popcorn1
   },
   {
     name: "COMBO CÓ GẤU",
     desc: "2 Coke + 1 Bắp 2 Ngăn 64OZ Phô Mai + Caramel",
     price: "119,000VND",
-    img: "/assets/popcorn2.png"
+    img: popcorn2
   },
   {
     name: "COMBO GẤU",
     desc: "1 Coke + 1 Bắp 2 Ngăn 64OZ Phô Mai + Caramel",
     price: "109,000VND",
-    img: "/assets/popcorn3.png"
+    img: popcorn3
   }
 ];
 
@@ -42,12 +44,11 @@ function QuantitySelector({ value, setValue }) {
   );
 }
 
-
 function FoodPage() {
   const [quantities, setQuantities] = useState([0, 0, 0]);
 
   return (
-  <div className="min-h-screen bg-[#090a0b] py-10 shadow-2xl">
+    <div className="min-h-screen bg-[#090a0b] py-10 shadow-2xl">
       <h1 className="text-4xl md:text-5xl font-extrabold text-white text-center mb-10 tracking-wide drop-shadow-lg uppercase">COMBO POP&COKE</h1>
       <div className="flex flex-wrap justify-center gap-8">
         {combos.map((combo, idx) => (
